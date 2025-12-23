@@ -1,51 +1,94 @@
-<!-- WhatsApp Button -->
-<a href="https://wa.me/918628969218" target="_blank" style="background-color: #25D366; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">
-Chat with us on WhatsApp
-</a>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RMS Services</title>
-<style>
-    body {font-family: Arial, sans-serif; background: #f4f6f9; margin: 0; padding: 0;}
-    header {background: #0d6efd; color: white; padding: 20px; text-align: center;}
-    .container {padding: 20px;}
-    .card {background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
-    h2 {color: #0d6efd;}
-    ul {line-height: 1.8;}
-    footer {text-align: center; padding: 10px; background: #0d6efd; color: white; margin-top: 20px;}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RMS Services - Housekeeping in Chail</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.6; color:#333; }
+    header { background: #25D366; color: white; padding: 40px 20px; text-align:center; }
+    header h1 { margin:0; font-size:2.5em; }
+    header p { margin-top:10px; font-size:1.2em; }
+    section { padding: 30px 20px; }
+    h2 { text-align:center; margin-bottom:20px; color:#25D366; }
+    .services, .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap:20px; }
+    .service-card, .gallery img { border-radius:10px; box-shadow:0 4px 6px rgba(0,0,0,0.2); width:100%; }
+    .service-card { padding:15px; background:white; text-align:center; }
+    .contact { max-width:600px; margin:0 auto; }
+    .contact input, .contact textarea { width:100%; padding:10px; margin:10px 0; border-radius:5px; border:1px solid #ccc; }
+    .contact input[type="submit"] { background:#25D366; color:white; border:none; cursor:pointer; font-weight:bold; }
+    footer { background:#333; color:white; text-align:center; padding:20px; }
+    /* WhatsApp Button */
+    .whatsapp-btn { position: fixed; top:10px; right:10px; z-index:1000; background:#25D366; color:white; padding:12px 20px; border-radius:50px; text-decoration:none; font-weight:bold; box-shadow:0 4px 6px rgba(0,0,0,0.3); }
+  </style>
 </head>
 <body>
 
+<!-- WhatsApp Button -->
+<a href="https://wa.me/918628969218" target="_blank" class="whatsapp-btn">WhatsApp Pe Baat Karein</a>
+
+<!-- Header / Hero -->
 <header>
-    <h1>RMS Services</h1>
-    <p>Marble Polishing • Housekeeping • Window & Glass Cleaning • Pest Control</p>
+  <h1>RMS Services</h1>
+  <p>Premium Housekeeping & Cleaning Services in Chail</p>
 </header>
 
-<div class="container">
-    <div class="card">
-        <h2>Contact Details</h2>
-        <p><strong>Name:</strong> Rohit Kashyap</p>
-        <p><strong>Mobile:</strong> +91 86289 69218</p>
-        <p><strong>Address:</strong> Jeetnagar, P/O Janedghat, Teh Junga, District Shimla, Himachal Pradesh (173217), India</p>
-    </div>
+<!-- About Us -->
+<section>
+  <h2>About Us</h2>
+  <p>RMS Services provides professional housekeeping and facility management in Chail. Our mission is to deliver spotless and reliable services to every client, ensuring comfort and cleanliness in homes and hotels.</p>
+</section>
 
-    <div class="card" style="margin-top:20px;">
-        <h2>Our Services</h2>
-        <ul>
-            <li>Marble Polishing</li>
-            <li>Housekeeping Services</li>
-            <li>Window and Glass Cleaning</li>
-            <li>Pest Control Services</li>
-        </ul>
+<!-- Services -->
+<section>
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="service-card">
+      <img src="service1.jpg" alt="Housekeeping">
+      <h3>Housekeeping</h3>
+      <p>Complete home and hotel cleaning services ensuring every corner sparkles.</p>
     </div>
-</div>
+    <div class="service-card">
+      <img src="service2.jpg" alt="Room Cleaning">
+      <h3>Room Cleaning & Sanitization</h3>
+      <p>Deep cleaning and sanitization of rooms with safe and eco-friendly products.</p>
+    </div>
+    <div class="service-card">
+      <img src="service3.jpg" alt="Event Services">
+      <h3>Event & Facility Services</h3>
+      <p>Professional cleaning and setup for events, hotels, and commercial facilities.</p>
+    </div>
+  </div>
+</section>
 
+<!-- Gallery -->
+<section>
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <img src="chail.jpg" alt="Chail Location">
+    <img src="service1.jpg" alt="Housekeeping in Action">
+    <img src="service2.jpg" alt="Cleaning Tools">
+    <img src="service3.jpg" alt="Sparkling Rooms">
+  </div>
+</section>
+
+<!-- Contact -->
+<section>
+  <h2>Contact Us</h2>
+  <div class="contact">
+    <p>Phone / WhatsApp: +91 8628969218<br>Email: contact@rmsservice.com<br>Service Area: Chail, Himachal Pradesh</p>
+    <form action="mailto:youremail@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="Name" placeholder="Your Name" required>
+      <input type="email" name="Email" placeholder="Your Email" required>
+      <textarea name="Message" placeholder="Your Message" required></textarea>
+      <input type="submit" value="Send Message">
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
 <footer>
-    © RMS Services - All Rights Reserved
+  &copy; 2025 RMS Services | Chail, Himachal Pradesh
 </footer>
 
 </body>
