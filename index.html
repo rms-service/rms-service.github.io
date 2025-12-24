@@ -8,83 +8,29 @@
   <title>RMS Service - Professional Facility Management</title>
   <link rel="icon" href="favicon.png">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-    header {
-      background-color: #005b96;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      background-color: #003f6b;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 10px;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .hero {
-      background-image: url('shiny-marble.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 400px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 2em;
-      font-weight: bold;
-      text-shadow: 2px 2px 5px #000;
-    }
-    .section {
-      padding: 40px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .service-box {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    footer {
-      background-color: #003f6b;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-
-    /* Feedback & Rating Styles */
-    .feedback-container { 
-      max-width: 600px; 
-      margin: 40px auto; 
-      background: #fff; 
-      padding: 20px; 
-      border-radius: 10px; 
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .feedback-container h2 { text-align:center; color:#333; }
-    .stars { display:flex; flex-direction: row-reverse; justify-content: center; margin-bottom: 20px; }
+    body { margin:0; font-family:'Segoe UI',sans-serif; background:#f4f4f4; color:#333; }
+    header { background:#005b96; color:white; padding:20px; text-align:center; }
+    nav { background:#003f6b; display:flex; justify-content:center; gap:30px; padding:10px; flex-wrap:wrap; }
+    nav a { color:white; text-decoration:none; font-weight:bold; }
+    .hero { background:url('shiny-marble.jpg') center/cover no-repeat; height:400px; display:flex; align-items:center; justify-content:center; color:white; font-size:2em; font-weight:bold; text-shadow:2px 2px 5px #000; }
+    .section { padding:40px; max-width:1000px; margin:auto; }
+    .services { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+    .service-box { background:white; padding:20px; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
+    footer { background:#003f6b; color:white; text-align:center; padding:20px; margin-top:40px; }
+    /* Contact buttons */
+    .contact-buttons { display:flex; gap:15px; flex-wrap:wrap; margin:20px 0; }
+    .contact-buttons a { flex:1; text-align:center; padding:12px; border-radius:5px; text-decoration:none; font-weight:bold; color:white; }
+    .whatsapp { background:#25D366; }
+    .sms { background:#ff9800; }
+    .email { background:#005b96; }
+    /* Feedback styles */
+    .feedback-container { max-width:600px; margin:40px auto; background:#fff; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1); }
+    .stars { display:flex; flex-direction:row-reverse; justify-content:center; margin-bottom:20px; }
     .stars input { display:none; }
     .stars label { font-size:2rem; color:#ccc; cursor:pointer; transition:0.3s; }
-    .stars input:checked ~ label, .stars label:hover, .stars label:hover ~ label { color: gold; }
+    .stars input:checked ~ label, .stars label:hover, .stars label:hover ~ label { color:gold; }
     .like-buttons { display:flex; justify-content:center; margin-bottom:20px; }
-    .like-buttons button { margin:0 10px; padding:10px 20px; border-radius:5px; cursor:pointer; border:1px solid #007bff; background:#fff; transition:0.3s;}
+    .like-buttons button { margin:0 10px; padding:10px 20px; border-radius:5px; cursor:pointer; border:1px solid #007bff; background:#fff; transition:0.3s; }
     .like-buttons button.active { background:#007bff; color:#fff; }
     form.feedback-form { display:flex; flex-direction:column; }
     form.feedback-form input, form.feedback-form textarea { padding:10px; margin:5px 0; border-radius:5px; border:1px solid #ccc; }
@@ -92,6 +38,7 @@
     form.feedback-form button:hover { background:#0056b3; }
     .comments { margin-top:20px; }
     .comment { border-bottom:1px solid #ccc; padding:10px 0; }
+    @media(max-width:600px){ nav{flex-direction:column; gap:10px;} .hero{font-size:1.5em;height:250px;} }
   </style>
 </head>
 <body>
@@ -111,9 +58,7 @@
   </nav>
 
   <!-- Hero Section -->
-  <div class="hero">
-    Cleanliness. Shine. Satisfaction.
-  </div>
+  <div class="hero">Cleanliness. Shine. Satisfaction.</div>
 
   <!-- About Section -->
   <section class="section" id="about">
@@ -125,26 +70,14 @@
   <section class="section" id="services">
     <h2>Our Services</h2>
     <div class="services">
-      <div class="service-box">
-        <h3>Housekeeping</h3>
-        <p>Complete housekeeping solutions for hotels, offices, hospitals, and residential buildings with trained manpower.</p>
-      </div>
-      <div class="service-box">
-        <h3>Marble Polishing</h3>
-        <p>Restore shine and elegance to your marble surfaces with our expert polishing services.</p>
-      </div>
-      <div class="service-box">
-        <h3>Pest Control</h3>
-        <p>Safe and effective pest control for homes and businesses using eco-friendly methods.</p>
-      </div>
-      <div class="service-box">
-        <h3>Food Services</h3>
-        <p>Professional food service solutions for events, offices, and hospitality setups.</p>
-      </div>
+      <div class="service-box"><h3>Housekeeping</h3><p>Complete housekeeping solutions for hotels, offices, hospitals, and residential buildings with trained manpower.</p></div>
+      <div class="service-box"><h3>Marble Polishing</h3><p>Restore shine and elegance to your marble surfaces with our expert polishing services.</p></div>
+      <div class="service-box"><h3>Pest Control</h3><p>Safe and effective pest control for homes and businesses using eco-friendly methods.</p></div>
+      <div class="service-box"><h3>Food Services</h3><p>Professional food service solutions for events, offices, and hospitality setups.</p></div>
     </div>
   </section>
 
-  <!-- Feedback & Rating Section -->
+  <!-- Feedback Section -->
   <section class="section" id="feedback">
     <div class="feedback-container">
       <h2>Rate & Give Feedback</h2>
@@ -165,9 +98,7 @@
         <textarea id="message" rows="4" placeholder="Your Feedback" required></textarea>
         <button type="submit">Submit Feedback</button>
       </form>
-      <div class="comments" id="commentsSection">
-        <h3>Comments:</h3>
-      </div>
+      <div class="comments" id="commentsSection"><h3>Comments:</h3></div>
     </div>
   </section>
 
@@ -178,85 +109,11 @@
     <p>Phone: +91-8628969218</p>
     <p>Location: Chail, Himachal Pradesh</p>
 
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/918628969218" target="_blank" 
-       style="display:inline-block; background:#25D366; color:white; padding:10px 20px; border-radius:5px; text-decoration:none; font-weight:bold; margin:10px 0;">
-       📱 Contact on WhatsApp
-    </a>
+    <div class="contact-buttons">
+      <a href="https://wa.me/918628969218" target="_blank" class="whatsapp">📱 WhatsApp</a>
+      <a href="sms:+918628969218?body=Hello RMS Service, I need your help" class="sms">✉️ SMS</a>
+      <a href="mailto:rohitkashyap69218@gmail.com" class="email">📧 Email</a>
+    </div>
 
-    <!-- Email Contact Form -->
-    <form action="mailto:rohitkashyap69218@gmail.com" method="post" enctype="text/plain" style="margin:20px 0;">
-      <label for="email">Your Email:</label><br>
-      <input type="email" id="email" name="email" required style="width:300px; padding:8px;"><br><br>
-      
-      <label for="message">Message:</label><br>
-      <textarea id="message" name="message" rows="4" style="width:300px; padding:8px;"></textarea><br><br>
-      
-      <input type="submit" value="Send Email" 
-             style="background:#005b96; color:white; padding:10px 20px; border:none; border-radius:5px; cursor:pointer;">
-    </form>
-
-    <!-- SMS Button -->
-    <a href="sms:+918628969218?body=Hello RMS Service, I need your help" 
-       style="display:inline-block; background:#ff9800; color:white; padding:10px 20px; border-radius:5px; text-decoration:none; font-weight:bold; margin:10px 0;">
-       ✉️ Send SMS
-    </a>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 RMS Service. All Rights Reserved.
-  </footer>
-
-  <!-- Feedback Script -->
-  <script>
-    let rating = 0;
-    document.querySelectorAll('.stars input').forEach(input => {
-      input.addEventListener('change', function() {
-        rating = this.value;
-        alert('You rated: ' + rating + ' star(s)');
-      });
-    });
-
-    let likes = 0;
-    let dislikes = 0;
-    const likeBtn = document.getElementById('likeBtn');
-    const dislikeBtn = document.getElementById('dislikeBtn');
-    const likeCount = document.getElementById('likeCount');
-    const dislikeCount = document.getElementById('dislikeCount');
-
-    likeBtn.addEventListener('click', () => {
-      likes++;
-      likeCount.textContent = likes;
-      likeBtn.classList.add('active');
-      dislikeBtn.classList.remove('active');
-    });
-
-    dislikeBtn.addEventListener('click', () => {
-      dislikes++;
-      dislikeCount.textContent = dislikes;
-      dislikeBtn.classList.add('active');
-      likeBtn.classList.remove('active');
-    });
-
-    // Feedback form
-    const feedbackForm = document.getElementById('feedbackForm');
-    const commentsSection = document.getElementById('commentsSection');
-
-    feedbackForm.addEventListener('submit', function(e){
-      e.preventDefault();
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('emailFeedback').value;
-      const message = document.getElementById('message').value;
-
-      const commentDiv = document.createElement('div');
-      commentDiv.classList.add('comment');
-      commentDiv.innerHTML = `<strong>${name}</strong> (${email}): <p>${message}</p>`;
-      commentsSection.appendChild(commentDiv);
-
-      feedbackForm.reset();
-    });
-  </script>
-
-</body>
-</html>
+    <!-- Google Map Embed -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3431.123456789!2d77.0!3d30.75!2m3!1f
