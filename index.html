@@ -12,18 +12,18 @@
     header { background:#005b96; color:white; padding:20px; text-align:center; }
     nav { background:#003f6b; display:flex; justify-content:center; gap:30px; padding:10px; flex-wrap:wrap; }
     nav a { color:white; text-decoration:none; font-weight:bold; }
-    .hero { background:url('shiny-marble.jpg') center/cover no-repeat; height:400px; display:flex; align-items:center; justify-content:center; color:white; font-size:2em; font-weight:bold; text-shadow:2px 2px 5px #000; }
+    .hero { background:url('shiny-marble.jpg') center/cover no-repeat; height:400px; display:flex; flex-direction:column; align-items:center; justify-content:center; color:white; font-size:2em; font-weight:bold; text-shadow:2px 2px 5px #000; }
+    .hero button { margin-top:20px; padding:12px 25px; background:#ff9800; border:none; border-radius:5px; color:white; font-weight:bold; cursor:pointer; }
     .section { padding:40px; max-width:1000px; margin:auto; }
     .services { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
-    .service-box { background:white; padding:20px; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
+    .service-box { background:white; padding:20px; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); text-align:center; }
+    .service-box img { width:60px; margin-bottom:10px; }
     footer { background:#003f6b; color:white; text-align:center; padding:20px; margin-top:40px; }
-    /* Contact buttons */
     .contact-buttons { display:flex; gap:15px; flex-wrap:wrap; margin:20px 0; }
     .contact-buttons a { flex:1; text-align:center; padding:12px; border-radius:5px; text-decoration:none; font-weight:bold; color:white; }
     .whatsapp { background:#25D366; }
     .sms { background:#ff9800; }
     .email { background:#005b96; }
-    /* Feedback styles */
     .feedback-container { max-width:600px; margin:40px auto; background:#fff; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1); }
     .stars { display:flex; flex-direction:row-reverse; justify-content:center; margin-bottom:20px; }
     .stars input { display:none; }
@@ -43,41 +43,45 @@
 </head>
 <body>
 
-  <!-- Header -->
   <header>
     <h1>RMS Service</h1>
     <p>Professional Facility Management in Himachal Pradesh</p>
   </header>
 
-  <!-- Navigation -->
   <nav>
     <a href="#home">Home</a>
     <a href="#services">Services</a>
+    <a href="#testimonials">Testimonials</a>
     <a href="#feedback">Feedback</a>
     <a href="#contact">Contact Us</a>
   </nav>
 
-  <!-- Hero Section -->
-  <div class="hero">Cleanliness. Shine. Satisfaction.</div>
+  <div class="hero">
+    Cleanliness. Shine. Satisfaction.
+    <button onclick="window.location='#contact'">Get a Quote</button>
+  </div>
 
-  <!-- About Section -->
   <section class="section" id="about">
     <h2>About Our Company</h2>
     <p>We are a professional service provider offering reliable and high-quality facility management solutions. Our goal is to maintain cleanliness, hygiene, and safety for homes, offices, hotels, and commercial spaces. With trained staff and modern equipment, we ensure customer satisfaction through efficient and affordable services.</p>
   </section>
 
-  <!-- Services Section -->
   <section class="section" id="services">
     <h2>Our Services</h2>
     <div class="services">
-      <div class="service-box"><h3>Housekeeping</h3><p>Complete housekeeping solutions for hotels, offices, hospitals, and residential buildings with trained manpower.</p></div>
-      <div class="service-box"><h3>Marble Polishing</h3><p>Restore shine and elegance to your marble surfaces with our expert polishing services.</p></div>
-      <div class="service-box"><h3>Pest Control</h3><p>Safe and effective pest control for homes and businesses using eco-friendly methods.</p></div>
-      <div class="service-box"><h3>Food Services</h3><p>Professional food service solutions for events, offices, and hospitality setups.</p></div>
+      <div class="service-box"><img src="housekeeping.png" alt="Housekeeping"><h3>Housekeeping</h3><p>Complete housekeeping solutions for hotels, offices, hospitals, and residential buildings.</p></div>
+      <div class="service-box"><img src="marble.png" alt="Marble Polishing"><h3>Marble Polishing</h3><p>Restore shine and elegance to your marble surfaces with expert polishing.</p></div>
+      <div class="service-box"><img src="pest.png" alt="Pest Control"><h3>Pest Control</h3><p>Safe and effective pest control for homes and businesses using eco-friendly methods.</p></div>
+      <div class="service-box"><img src="food.png" alt="Food Services"><h3>Food Services</h3><p>Professional food service solutions for events, offices, and hospitality setups.</p></div>
     </div>
   </section>
 
-  <!-- Feedback Section -->
+  <section class="section" id="testimonials">
+    <h2>Testimonials</h2>
+    <p>⭐ ⭐ ⭐ ⭐ ⭐ “RMS Service transformed our hotel’s cleanliness standards!” – Client A</p>
+    <p>⭐ ⭐ ⭐ ⭐ “Professional and reliable pest control service.” – Client B</p>
+  </section>
+
   <section class="section" id="feedback">
     <div class="feedback-container">
       <h2>Rate & Give Feedback</h2>
@@ -98,22 +102,4 @@
         <textarea id="message" rows="4" placeholder="Your Feedback" required></textarea>
         <button type="submit">Submit Feedback</button>
       </form>
-      <div class="comments" id="commentsSection"><h3>Comments:</h3></div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="section" id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: rohitkashyap69218@gmail.com</p>
-    <p>Phone: +91-8628969218</p>
-    <p>Location: Chail, Himachal Pradesh</p>
-
-    <div class="contact-buttons">
-      <a href="https://wa.me/918628969218" target="_blank" class="whatsapp">📱 WhatsApp</a>
-      <a href="sms:+918628969218?body=Hello RMS Service, I need your help" class="sms">✉️ SMS</a>
-      <a href="mailto:rohitkashyap69218@gmail.com" class="email">📧 Email</a>
-    </div>
-
-    <!-- Google Map Embed -->
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3431.123456789!2d77.0!3d30.75!2m3!1f
+      <div class="comments" id="commentsSection"><h3>Comments:</
