@@ -138,4 +138,70 @@
      ✉️ Send SMS
   </a>
   </section>
-  
+  <!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feedback & Rating</title>
+<style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f5f5f5; }
+    .container { max-width: 600px; margin: auto; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);}
+    h2 { text-align: center; color: #333; }
+    .stars { display: flex; flex-direction: row-reverse; justify-content: center; margin-bottom: 20px; }
+    .stars input { display: none; }
+    .stars label { font-size: 2rem; color: #ccc; cursor: pointer; transition: 0.3s; }
+    .stars input:checked ~ label, .stars label:hover, .stars label:hover ~ label { color: gold; }
+    form { display: flex; flex-direction: column; }
+    input, textarea { padding: 10px; margin: 5px 0; border-radius: 5px; border: 1px solid #ccc; }
+    button { padding: 10px; background: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer; transition: 0.3s;}
+    button:hover { background: #0056b3; }
+    .like-buttons { display: flex; justify-content: center; margin-bottom: 20px; }
+    .like-buttons button { margin: 0 10px; padding: 10px 20px; border-radius: 5px; cursor: pointer; border: 1px solid #007bff; background: #fff; transition: 0.3s;}
+    .like-buttons button.active { background: #007bff; color: #fff; }
+    .comments { margin-top: 20px; }
+    .comment { border-bottom: 1px solid #ccc; padding: 10px 0; }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Rate & Give Feedback</h2>
+    <div class="stars">
+        <input type="radio" id="star5" name="rating" value="5"><label for="star5">&#9733;</label>
+        <input type="radio" id="star4" name="rating" value="4"><label for="star4">&#9733;</label>
+        <input type="radio" id="star3" name="rating" value="3"><label for="star3">&#9733;</label>
+        <input type="radio" id="star2" name="rating" value="2"><label for="star2">&#9733;</label>
+        <input type="radio" id="star1" name="rating" value="1"><label for="star1">&#9733;</label>
+    </div>
+    <div class="like-buttons">
+        <button id="likeBtn">👍 Like (<span id="likeCount">0</span>)</button>
+        <button id="dislikeBtn">👎 Dislike (<span id="dislikeCount">0</span>)</button>
+    </div>
+    <form id="feedbackForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" rows="4" placeholder="Your Feedback" required></textarea>
+        <button type="submit">Submit Feedback</button>
+    </form>
+    <div class="comments" id="commentsSection">
+        <h3>Comments:</h3>
+    </div>
+</div>
+<script>
+    let rating = 0;
+    document.querySelectorAll('.stars input').forEach(input => {
+        input.addEventListener('change', function() {
+            rating = this.value;
+            alert('You rated: ' + rating + ' star(s)');
+        });
+    });
+    let likes = 0;
+    let dislikes = 0;
+    const likeBtn = document.getElementById('likeBtn');
+    const dislikeBtn = document.getElementById('dislikeBtn');
+    const likeCount = document.getElementById('likeCount');
+    const dislikeCount = document.getElementById('dislikeCount');
+    likeBtn.addEventListener('click', () => {
+        likes++;
+        likeCount.textContent = likes;
+        likeBtn.classList.add('active');
+        dislikeBtn.classList.remove('
