@@ -4,8 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RMS Service - Professional Facility Management</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     body { margin:0; font-family:'Segoe UI',sans-serif; background:#f4f4f4; color:#333; }
+
     header {
       background: linear-gradient(to bottom, #004080, #0073e6);
       color: white;
@@ -15,18 +20,11 @@
       align-items: center;
       flex-wrap: wrap;
     }
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-    .logo img {
-      height: 60px;
-    }
-    .tagline {
-      font-size: 1rem;
-      text-align: right;
-    }
+
+    .logo { display: flex; align-items: center; gap: 15px; }
+    .logo img { height: 60px; }
+    .tagline { font-size: 1rem; text-align: right; }
+
     nav {
       background:#003f6b;
       display:flex;
@@ -35,111 +33,120 @@
       padding:10px;
       flex-wrap:wrap;
     }
+
     nav a {
       color:white;
       text-decoration:none;
       font-weight:bold;
       position: relative;
     }
+
     nav a::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: -3px;
-      left: 0;
-      background-color: #ff9800;
-      transition: width 0.3s;
+      content:'';
+      position:absolute;
+      width:0;
+      height:2px;
+      bottom:-3px;
+      left:0;
+      background:#ff9800;
+      transition:0.3s;
     }
-    nav a:hover::after {
-      width: 100%;
-    }
+
+    nav a:hover::after { width:100%; }
+
     .hero {
       background:url('shiny-marble.png') center/cover no-repeat;
       height:400px;
       display:flex;
       flex-direction:column;
-      align-items:center;
       justify-content:center;
+      align-items:center;
       color:white;
-      font-size:2em;
-      font-weight:bold;
       text-shadow:2px 2px 5px #000;
     }
+
     .hero-text {
-      color: #e0f7fa;
-      font-size: 1.5em;
-      font-weight: 600;
-      letter-spacing: 1px;
-      animation: fadeInText 2s ease-in-out;
+      font-size:1.6em;
+      font-weight:600;
+      animation:fadeIn 2s;
     }
-    @keyframes fadeInText {
-      from { opacity: 0; transform: scale(0.95); }
-      to { opacity: 1; transform: scale(1); }
+
+    @keyframes fadeIn {
+      from { opacity:0; transform:scale(0.95); }
+      to { opacity:1; transform:scale(1); }
     }
+
     .hero button {
       margin-top:20px;
-      padding:12px 25px;
+      padding:12px 30px;
       background:#ff9800;
       border:none;
-      border-radius:5px;
+      border-radius:30px;
       color:white;
       font-weight:bold;
       cursor:pointer;
-      animation: pulse 2s infinite;
     }
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
-    }
+
     .section {
       padding:40px;
       max-width:1000px;
       margin:auto;
     }
+
     .services {
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
       gap:20px;
     }
+
     .service-box {
       background:white;
       padding:20px;
-      border-radius:8px;
-      box-shadow:0 2px 5px rgba(0,0,0,0.1);
+      border-radius:10px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
       text-align:center;
     }
-    .service-box h3 {
-      margin-bottom:10px;
-    }
+
     .service-box img {
       width:100%;
-      border-radius:8px;
+      border-radius:10px;
       margin-top:15px;
     }
+
+    /* CONTACT BUTTONS */
     .contact-buttons {
       display:flex;
       gap:15px;
       flex-wrap:wrap;
-      margin:20px 0;
+      margin-top:25px;
     }
-    .contact-buttons a {
+
+    .btn-pro {
       flex:1;
-      text-align:center;
-      padding:12px;
-      border-radius:5px;
-      text-decoration:none;
-      font-weight:bold;
+      min-width:180px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:14px 20px;
+      font-size:16px;
+      font-weight:600;
       color:white;
-      transition: transform 0.3s;
+      text-decoration:none;
+      border-radius:30px;
+      transition:0.3s;
+      box-shadow:0 6px 15px rgba(0,0,0,0.2);
     }
-    .contact-buttons a:hover {
-      transform: scale(1.05);
+
+    .btn-pro:hover {
+      transform:translateY(-3px);
+      box-shadow:0 10px 25px rgba(0,0,0,0.3);
     }
-    .whatsapp { background:#25D366; }
-    .sms { background:#ff9800; }
-    .email { background:#005b96; }
+
+    .btn-pro.whatsapp { background:linear-gradient(135deg,#25D366,#128C7E); }
+    .btn-pro.sms { background:linear-gradient(135deg,#ff9800,#e65100); }
+    .btn-pro.email { background:linear-gradient(135deg,#005b96,#003f6b); }
+
     footer {
       background:#003f6b;
       color:white;
@@ -147,89 +154,91 @@
       padding:20px;
       margin-top:40px;
     }
-    @media(max-width:600px){ nav{flex-direction:column; gap:10px;} .hero{font-size:1.5em;height:250px;} }
+
+    @media(max-width:600px){
+      nav { flex-direction:column; gap:10px; }
+      .hero { height:260px; font-size:1.3em; }
+    }
   </style>
 </head>
+
 <body>
 
-  <header>
-    <div class="logo">
-      <img src="rms-logo.png" alt="RMS Service Logo">
-      <h1>RMS SERVICE</h1>
-    </div>
-    <div class="tagline">
-      <p>Professional Facility Management in Himachal Pradesh</p>
-    </div>
-  </header>
-
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact Us</a>
-  </nav>
-
-  <div class="hero">
-    <span class="hero-text">Cleanliness • Shine • Satisfaction</span>
-    <button onclick="window.location='#contact'">Get a Quote</button>
+<header>
+  <div class="logo">
+    <img src="rms-logo.png" alt="RMS Logo">
+    <h1>RMS SERVICE</h1>
   </div>
+  <div class="tagline">
+    Professional Facility Management in Himachal Pradesh
+  </div>
+</header>
 
-  <section class="section" id="about">
-    <h2>About Our Company</h2>
-    <p>We are a professional service provider offering reliable and high-quality facility management solutions. Our goal is to maintain cleanliness, hygiene, and safety for homes, offices, hotels, and commercial spaces. With trained staff and modern equipment, we ensure customer satisfaction through efficient and affordable services.</p>
-  </section>
+<nav>
+  <a href="#home">Home</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact Us</a>
+</nav>
 
-  <section class="section" id="services">
-    <h2>Our Services</h2>
-    <div class="services">
+<div class="hero">
+  <div class="hero-text">Cleanliness • Shine • Satisfaction</div>
+  <button onclick="location.href='#contact'">Get a Quote</button>
+</div>
 
-      <!-- Housekeeping -->
-      <div class="service-box">
-        <h3>🏠 Housekeeping</h3>
-        <p>We provide professional housekeeping services for hotels, offices, hospitals, and homes. Our trained staff ensures cleanliness, organization, and a welcoming environment every day.</p>
-        <img src="housekeeping-floor-cleaning.png" alt="Housekeeping Floor Cleaning">
-        <img src="housekeeping-drain-cleaning.png" alt="Housekeeping Drain Cleaning">
-      </div>
+<section class="section" id="about">
+  <h2>About Us</h2>
+  <p>We provide professional housekeeping, marble polishing and pest control services with trained staff and modern equipment.</p>
+</section>
 
-      <!-- Marble Polishing -->
-      <div class="service-box">
-        <h3>✨ Marble Polishing</h3>
-        <p>Restore the natural shine of your marble floors and surfaces. Our expert polishing techniques enhance elegance and make your spaces look brand new.</p>
-        <img src="marble-polishing-before-after.png" alt="Marble Polishing Before and After">
-        <img src="dark-marble-polishing.png" alt="Dark Marble Polishing">
-      </div>
+<section class="section" id="services">
+  <h2>Our Services</h2>
+  <div class="services">
 
-      <!-- Pest Control -->
-      <div class="service-box">
-        <h3>🛡️ Pest Control</h3>
-        <p>Protect your home and workplace with our safe, eco-friendly pest control services. We ensure long-lasting relief from insects and rodents using modern methods.</p>
-        <img src="pest-control-spray.png" alt="Pest Control Spray">
-        <img src="pest-control-drain.png" alt="Pest Control Drain Treatment">
-      </div>
-
+    <div class="service-box">
+      <h3>🏠 Housekeeping</h3>
+      <p>Daily cleaning & hygiene maintenance for all spaces.</p>
+      <img src="housekeeping-floor-cleaning.png">
     </div>
-  </section>
 
-  <section class="section" id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: rohitkashyap69218@gmail.com</p>
-    <p>Phone: +91-8628969218</p>
-    <p>Location: Chail, Himachal Pradesh</p>
-
-    <div class="contact-buttons">
-      <a href="https://wa.me/918628969218" target="_blank" class="whatsapp">📱 WhatsApp</a>
-      <a href="sms:+918628969218?body=Hello RMS Service, I need your help" class="sms">✉️ SMS</a>
-      <a href="mailto:rohitkashyap69218@gmail.com" class="email">📧 Email</a>
+    <div class="service-box">
+      <h3>✨ Marble Polishing</h3>
+      <p>Restore natural shine of marble floors.</p>
+      <img src="marble-polishing-before-after.png">
     </div>
-  </section>
 
-  <footer>
-    <p>&copy; 2025 RMS Service. All Rights Reserved.</p>
-    <p>
-      <a href="https://facebook.com" style="color:white; margin:0 10px;">Facebook</a> |
-      <a href="https://instagram.com" style="color:white; margin:0 10px;">Instagram</a> |
-      <a href="https://linkedin.com" style="color:white; margin:0 10px;">LinkedIn</a>
-    </p>
-  </footer>
+    <div class="service-box">
+      <h3>🛡️ Pest Control</h3>
+      <p>Safe and effective pest control solutions.</p>
+      <img src="pest-control-spray.png">
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: rohitkashyap69218@gmail.com</p>
+  <p>Phone: +91-8628969218</p>
+  <p>Location: Chail, Himachal Pradesh</p>
+
+  <div class="contact-buttons">
+    <a href="https://wa.me/918628969218" class="btn-pro whatsapp" target="_blank">
+      <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
+
+    <a href="sms:+918628969218" class="btn-pro sms">
+      <i class="fas fa-sms"></i> SMS
+    </a>
+
+    <a href="mailto:rohitkashyap69218@gmail.com" class="btn-pro email">
+      <i class="fas fa-envelope"></i> Email
+    </a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 RMS Service. All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
