@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Your Business Website</title>
+    <title>Professional Facility Services</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
@@ -14,9 +14,9 @@
 
         /* HEADER */
         header {
-            background: #3B82F6; /* Blue */
+            background: #2563EB; /* Professional Blue */
             color: white;
-            padding: 20px;
+            padding: 22px;
             text-align: center;
         }
 
@@ -31,23 +31,45 @@
             text-decoration: underline;
         }
 
-        /* SECTION */
         section {
-            padding: 40px 20px;
+            padding: 45px 20px;
             text-align: center;
         }
 
         h2 {
             color: #1B2A49;
+            margin-bottom: 10px;
         }
 
         p {
             color: #555;
-            max-width: 700px;
+            max-width: 850px;
             margin: auto;
+            line-height: 1.6;
         }
 
-        /* CONTACT BOXES */
+        /* SERVICES */
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .service-box {
+            width: 260px;
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+            padding: 20px;
+            background: #F9FAFB;
+        }
+
+        .service-box h3 {
+            color: #2563EB;
+        }
+
+        /* CONTACT */
         .contact-boxes {
             display: flex;
             flex-wrap: wrap;
@@ -58,7 +80,7 @@
 
         .box {
             width: 220px;
-            padding: 20px;
+            padding: 18px;
             border-radius: 8px;
             color: white;
             font-weight: bold;
@@ -69,7 +91,6 @@
         .sms { background: #2563EB; }
         .email { background: #F97316; }
 
-        /* FOOTER */
         footer {
             background: #F1F5F9;
             padding: 15px;
@@ -84,47 +105,76 @@
 
 <!-- HEADER -->
 <header>
-    <h1>Your Business Name</h1>
+    <h1>Professional Facility Services</h1>
     <nav>
         <a href="#">Home</a>
-        <a href="#">Services</a>
-        <a href="#contact">Contact</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact Us</a>
     </nav>
 </header>
 
-<!-- HOME SECTION -->
+<!-- ABOUT US -->
 <section>
-    <h2>Welcome</h2>
+    <h2>About Our Company</h2>
     <p>
-        We provide professional services with quality, trust and commitment.
-        Contact us anytime for work related queries.
+        We are a professional service provider offering reliable and high-quality
+        facility management solutions. Our goal is to maintain cleanliness,
+        hygiene, and safety for homes, offices, hotels, and commercial spaces.
+        With trained staff and modern equipment, we ensure customer satisfaction
+        through efficient and affordable services.
     </p>
 </section>
 
 <!-- SERVICES -->
-<section style="background:#F8FAFC;">
+<section id="services" style="background:#F8FAFC;">
     <h2>Our Services</h2>
-    <p>
-        Housekeeping, cleaning, maintenance and other professional services.
-    </p>
+
+    <div class="services">
+
+        <div class="service-box">
+            <h3>Housekeeping Services</h3>
+            <p>
+                Complete housekeeping solutions for hotels, offices, hospitals,
+                and residential buildings with trained manpower.
+            </p>
+        </div>
+
+        <div class="service-box">
+            <h3>Marble Polishing</h3>
+            <p>
+                Professional marble and floor polishing services to restore shine,
+                smoothness, and long-lasting protection.
+            </p>
+        </div>
+
+        <div class="service-box">
+            <h3>Pest Control Services</h3>
+            <p>
+                Safe and effective pest control solutions for cockroaches,
+                termites, rodents, and insects.
+            </p>
+        </div>
+
+    </div>
 </section>
 
-<!-- CONTACT US -->
+<!-- CONTACT -->
 <section id="contact">
     <h2>Contact Us</h2>
-    <p>Get in touch with us easily</p>
+    <p>Contact us anytime for service inquiries</p>
 
     <div class="contact-boxes">
 
+        <!-- 🔴 NUMBER YAHAN CHANGE KARNA -->
         <!-- WhatsApp -->
         <a class="box whatsapp"
-           href="https://wa.me/91XXXXXXXXXX">
+           href="https://wa.me/918628969218" target="_blank">
             📱 WhatsApp
         </a>
 
         <!-- SMS -->
         <a class="box sms"
-           href="sms:91XXXXXXXXXX">
+           href="sms:918628969218">
             💬 Send SMS
         </a>
 
@@ -139,7 +189,7 @@
 
 <!-- FOOTER -->
 <footer>
-    © 2025 Your Business Name. All Rights Reserved.
+    © 2025 Professional Facility Services. All Rights Reserved.
 </footer>
 
 </body>
