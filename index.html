@@ -47,16 +47,23 @@ nav a:hover::after{width:100%}
 .hero{
 background:url('shiny-marble.png') center/cover no-repeat;
 height:400px;
-display:flex;flex-direction:column;
-justify-content:center;align-items:center;
-color:#fff;text-shadow:2px 2px 5px #000
+display:flex;justify-content:space-between;align-items:center;
+color:#fff;text-shadow:2px 2px 5px #000;
+padding:0 40px;
 }
-.hero-text{font-size:1.6em;font-weight:600}
+.hero-left{flex:1}
+.hero-text{font-size:2em;font-weight:700}
 .hero button{
 margin-top:20px;padding:12px 30px;
 background:#ff9800;border:none;
 border-radius:30px;color:#fff;
-font-weight:bold;cursor:pointer
+font-weight:bold;cursor:pointer;transition:.3s
+}
+.hero button:hover{background:#e67e00;transform:scale(1.05)}
+.hero-right{flex:1;display:flex;justify-content:center}
+.hero-right img{
+max-height:320px;border-radius:12px;
+box-shadow:0 6px 20px rgba(0,0,0,0.3)
 }
 
 /* SECTIONS */
@@ -126,7 +133,8 @@ text-align:center;padding:20px;margin-top:40px
 }
 
 @media(max-width:600px){
-.hero{height:260px}
+.hero{flex-direction:column;height:auto;padding:20px}
+.hero-right img{max-height:200px;margin-top:20px}
 }
 </style>
 </head>
@@ -150,9 +158,15 @@ Professional Facility Management in Himachal Pradesh
 <a href="#contact">Contact Us</a>
 </nav>
 
+<!-- HERO -->
 <div class="hero">
-<div class="hero-text">Cleanliness • Shine • Satisfaction</div>
-<button onclick="location.href='#contact'">Get a Quote</button>
+  <div class="hero-left">
+    <div class="hero-text">Cleanliness • Shine • Satisfaction</div>
+    <button onclick="location.href='#contact'">Get a Quote</button>
+  </div>
+  <div class="hero-right">
+    <img src="rms-founder.png" alt="Founder RMS Service">
+  </div>
 </div>
 
 <section class="section" id="about">
@@ -245,19 +259,4 @@ and modern equipment.
 <i class="fab fa-whatsapp"></i> WhatsApp
 </a>
 
-<a href="sms:+918628969218" class="btn-pro sms">
-<i class="fas fa-sms"></i> SMS
-</a>
-
-<a href="mailto:rohitkashyap69218@gmail.com" class="btn-pro email">
-<i class="fas fa-envelope"></i> Email
-</a>
-</div>
-</section>
-
-<footer>
-© 2025 RMS Service. All Rights Reserved.
-</footer>
-
-</body>
-</html>
+<a href="
