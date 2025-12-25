@@ -1,188 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>RMS Service - Professional Facility Management</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RMS Service - Professional Facility Management</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #ffffff;
-      color: #1e293b;
-    }
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    header {
-      background: #0f172a;
-      color: white;
-      padding: 25px;
-      text-align: center;
-    }
+<style>
+body{margin:0;font-family:'Segoe UI',sans-serif;background:#f4f4f4;color:#333}
 
-    header h1 {
-      margin: 0;
-      font-size: 34px;
-    }
+/* HEADER */
+header{
+background:linear-gradient(to bottom,#004080,#0073e6);
+color:#fff;padding:20px;
+display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap
+}
+.logo{display:flex;align-items:center;gap:15px}
+.logo img{height:60px}
+.tagline{font-size:1rem}
 
-    header p {
-      margin-top: 8px;
-      font-size: 16px;
-      opacity: 0.9;
-    }
+/* NAV */
+nav{
+background:#003f6b;
+display:flex;justify-content:center;gap:30px;
+padding:10px;flex-wrap:wrap
+}
+nav a{
+color:#fff;text-decoration:none;font-weight:bold;position:relative
+}
+nav a::after{
+content:'';position:absolute;width:0;height:2px;
+bottom:-3px;left:0;background:#ff9800;transition:.3s
+}
+nav a:hover::after{width:100%}
 
-    /* ===== SERVICES ===== */
-    .services {
-      padding: 60px 20px;
-      background: #f1f5f9;
-      text-align: center;
-    }
+/* HERO */
+.hero{
+background:url('shiny-marble.png') center/cover no-repeat;
+height:400px;
+display:flex;flex-direction:column;
+justify-content:center;align-items:center;
+color:#fff;text-shadow:2px 2px 5px #000
+}
+.hero-text{font-size:1.6em;font-weight:600}
+.hero button{
+margin-top:20px;padding:12px 30px;
+background:#ff9800;border:none;
+border-radius:30px;color:#fff;
+font-weight:bold;cursor:pointer
+}
 
-    .services h2 {
-      font-size: 32px;
-      margin-bottom: 40px;
-    }
+/* SECTIONS */
+.section{padding:40px;max-width:1000px;margin:auto}
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px
+}
+.service-box{
+background:#fff;padding:20px;border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,.1);
+text-align:center
+}
+.service-box img{
+width:100%;border-radius:10px;margin-top:10px
+}
 
-    .service-box {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      max-width: 1100px;
-      margin: auto;
-    }
+/* CONTACT BUTTONS */
+.contact-buttons{
+display:flex;gap:15px;flex-wrap:wrap;margin-top:25px
+}
+.btn-pro{
+flex:1;min-width:180px;
+display:flex;align-items:center;justify-content:center;gap:10px;
+padding:14px 20px;font-size:16px;font-weight:600;
+color:#fff;text-decoration:none;border-radius:30px;
+transition:.3s;
+box-shadow:0 6px 15px rgba(0,0,0,.2)
+}
+.btn-pro:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(0,0,0,.3)
+}
+.btn-pro.whatsapp{background:linear-gradient(135deg,#25D366,#128C7E)}
+.btn-pro.sms{background:linear-gradient(135deg,#ff9800,#e65100)}
+.btn-pro.email{background:linear-gradient(135deg,#005b96,#003f6b)}
 
-    .service-card {
-      background: white;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-    }
+footer{
+background:#003f6b;color:#fff;
+text-align:center;padding:20px;margin-top:40px
+}
 
-    .service-card img {
-      width: 100%;
-      border-radius: 12px;
-      margin-bottom: 15px;
-    }
-
-    .service-card h3 {
-      margin: 10px 0;
-      font-size: 20px;
-    }
-
-    /* ===== CORE VALUES ===== */
-    .core-values {
-      background: #f8fafc;
-      padding: 70px 20px;
-      text-align: center;
-    }
-
-    .core-values h2 {
-      font-size: 34px;
-      margin-bottom: 45px;
-    }
-
-    .values-box {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .value-card {
-      background: white;
-      padding: 35px 25px;
-      border-radius: 18px;
-      box-shadow: 0 12px 25px rgba(0,0,0,0.08);
-      transition: all 0.3s ease;
-    }
-
-    .value-card:hover {
-      transform: translateY(-12px);
-      box-shadow: 0 25px 40px rgba(0,0,0,0.12);
-    }
-
-    .value-card .icon {
-      font-size: 52px;
-      margin-bottom: 18px;
-    }
-
-    .value-card h3 {
-      font-size: 22px;
-      margin-bottom: 10px;
-    }
-
-    .value-card p {
-      font-size: 15px;
-      color: #475569;
-    }
-
-    footer {
-      background: #0f172a;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-    }
-  </style>
+@media(max-width:600px){
+.hero{height:260px}
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>RMS Service</h1>
-  <p>Professional Housekeeping & Facility Management</p>
+<div class="logo">
+<img src="rms-logo.png">
+<h1>RMS SERVICE</h1>
+</div>
+<div class="tagline">
+Professional Facility Management in Himachal Pradesh
+</div>
 </header>
 
-<!-- SERVICES SECTION -->
-<section class="services">
-  <h2>Our Services</h2>
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact Us</a>
+</nav>
 
-  <div class="service-box">
-    <div class="service-card">
-      <img src="images/housekeeping.jpg" alt="Housekeeping">
-      <h3>Housekeeping Services</h3>
-    </div>
+<div class="hero">
+<div class="hero-text">Cleanliness • Shine • Satisfaction</div>
+<button onclick="location.href='#contact'">Get a Quote</button>
+</div>
 
-    <div class="service-card">
-      <img src="images/marble.jpg" alt="Marble Polishing">
-      <h3>Marble Polishing</h3>
-    </div>
-
-    <div class="service-card">
-      <img src="images/pest.jpg" alt="Pest Control">
-      <h3>Pest Control</h3>
-    </div>
-  </div>
+<section class="section" id="about">
+<h2>About Us</h2>
+<p>
+We provide professional housekeeping, marble polishing,
+pest control and deep cleaning services with trained staff
+and modern equipment.
+</p>
 </section>
 
-<!-- CLEANLINESS SHINE SATISFACTION -->
-<section class="core-values">
-  <h2>Cleanliness • Shine • Satisfaction</h2>
+<!-- SERVICES -->
+<section class="section" id="services">
+<h2>Our Services</h2>
 
-  <div class="values-box">
-    <div class="value-card">
-      <div class="icon">🧼</div>
-      <h3>Cleanliness</h3>
-      <p>We follow strict hygiene standards to deliver deep and detailed cleaning.</p>
-    </div>
+<div class="services">
 
-    <div class="value-card">
-      <div class="icon">✨</div>
-      <h3>Shine</h3>
-      <p>Advanced tools and trained staff ensure spotless and shining results.</p>
-    </div>
+<div class="service-box">
+<h3>🏠 Housekeeping</h3>
+<p>Daily cleaning & hygiene maintenance</p>
+<img src="housekeeping-floor-cleaning.png">
+<img src="housekeeping-office-cleaning.png">
+<img src="housekeeping-staff-cleaning.png">
+</div>
 
-    <div class="value-card">
-      <div class="icon">😊</div>
-      <h3>Satisfaction</h3>
-      <p>Customer happiness is our priority in every service we provide.</p>
-    </div>
-  </div>
+<div class="service-box">
+<h3>✨ Marble Polishing</h3>
+<p>Restore natural shine of marble floors</p>
+<img src="marble-polishing-before.png">
+<img src="marble-polishing-after.png">
+<img src="marble-polishing-machine.png">
+</div>
+
+<div class="service-box">
+<h3>🛡️ Pest Control</h3>
+<p>Safe and effective pest solutions</p>
+<img src="pest-control-spray.png">
+<img src="pest-control-cockroach.png">
+<img src="pest-control-bedbug.png">
+</div>
+
+<div class="service-box">
+<h3>🧼 Carpet & Sofa Shampooing</h3>
+<p>Deep cleaning for carpets & sofas</p>
+<img src="carpet-cleaning.png">
+<img src="sofa-cleaning.png">
+<img src="sofa-shampooing.png">
+</div>
+
+<div class="service-box">
+<h3>🪟 Window Glass Cleaning</h3>
+<p>Crystal clear window & glass cleaning</p>
+<img src="window-glass-cleaning.png">
+<img src="glass-cleaning-highrise.png">
+<img src="window-cleaning-office.png">
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+<h2>Contact Us</h2>
+<p>Email: rohitkashyap69218@gmail.com</p>
+<p>Phone: +91-8628969218</p>
+<p>Location: Chail, Himachal Pradesh</p>
+
+<div class="contact-buttons">
+<a href="https://wa.me/918628969218" class="btn-pro whatsapp" target="_blank">
+<i class="fab fa-whatsapp"></i> WhatsApp
+</a>
+
+<a href="sms:+918628969218" class="btn-pro sms">
+<i class="fas fa-sms"></i> SMS
+</a>
+
+<a href="mailto:rohitkashyap69218@gmail.com" class="btn-pro email">
+<i class="fas fa-envelope"></i> Email
+</a>
+</div>
 </section>
 
 <footer>
-  © 2025 RMS Service | All Rights Reserved
+© 2025 RMS Service. All Rights Reserved.
 </footer>
 
 </body>
