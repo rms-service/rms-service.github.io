@@ -1,167 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RMS Service - Professional Facility Management</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RMS Service - Professional Facility Management</title>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <style>
-    body { margin:0; font-family:'Segoe UI',sans-serif; background:#f4f4f4; color:#333; }
+<style>
+body{margin:0;font-family:'Segoe UI',sans-serif;background:#f4f4f4;color:#333}
 
-    header {
-      background: linear-gradient(to bottom, #004080, #0073e6);
-      color: white;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+/* HEADER */
+header{
+background:linear-gradient(to bottom,#004080,#0073e6);
+color:#fff;padding:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap
+}
+.logo{display:flex;align-items:center;gap:15px}
+.logo img{height:60px}
 
-    .logo { display: flex; align-items: center; gap: 15px; }
-    .logo img { height: 60px; }
+/* NAV */
+nav{
+background:#003f6b;display:flex;justify-content:center;gap:30px;padding:10px;flex-wrap:wrap
+}
+nav a{color:#fff;text-decoration:none;font-weight:bold}
 
-    nav {
-      background:#003f6b;
-      display:flex;
-      justify-content:center;
-      gap:30px;
-      padding:10px;
-      flex-wrap:wrap;
-    }
+/* HERO */
+.hero{
+height:300px;background:#000;color:#fff;
+display:flex;flex-direction:column;justify-content:center;align-items:center
+}
+.hero button{
+margin-top:15px;padding:12px 30px;border:none;
+background:#ff9800;color:#fff;font-weight:bold;border-radius:30px;cursor:pointer
+}
 
-    nav a {
-      color:white;
-      text-decoration:none;
-      font-weight:bold;
-    }
+/* SECTIONS */
+.section{padding:40px;max-width:1100px;margin:auto}
+.services{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px
+}
+.service-box{
+background:#fff;padding:20px;border-radius:12px;
+box-shadow:0 4px 12px rgba(0,0,0,0.15);text-align:center
+}
+.service-box img{
+width:100%;margin-top:10px;border-radius:10px
+}
 
-    .hero {
-      background:#000;
-      height:300px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      color:white;
-      font-size:1.8em;
-    }
+/* CONTACT BUTTONS */
+.contact-buttons{
+display:flex;gap:15px;flex-wrap:wrap;margin-top:25px
+}
+.btn-pro{
+flex:1;min-width:180px;
+display:flex;align-items:center;justify-content:center;gap:10px;
+padding:14px 20px;font-size:16px;font-weight:600;
+color:#fff;text-decoration:none;border-radius:30px;
+box-shadow:0 6px 15px rgba(0,0,0,.2)
+}
+.btn-pro.whatsapp{background:linear-gradient(135deg,#25D366,#128C7E)}
+.btn-pro.sms{background:linear-gradient(135deg,#ff9800,#e65100)}
+.btn-pro.email{background:linear-gradient(135deg,#005b96,#003f6b)}
 
-    .section {
-      padding:40px;
-      max-width:1100px;
-      margin:auto;
-    }
-
-    .services {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:25px;
-    }
-
-    .service-box {
-      background:white;
-      padding:20px;
-      border-radius:12px;
-      box-shadow:0 4px 12px rgba(0,0,0,0.15);
-      text-align:center;
-    }
-
-    .service-box img {
-      width:100%;
-      border-radius:10px;
-      margin-top:10px;
-    }
-
-    footer {
-      background:#003f6b;
-      color:white;
-      text-align:center;
-      padding:20px;
-      margin-top:40px;
-    }
-  </style>
+footer{
+background:#003f6b;color:#fff;text-align:center;padding:20px;margin-top:40px
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo">
-    <img src="rms-logo.png">
-    <h1>RMS SERVICE</h1>
-  </div>
+<div class="logo">
+<img src="rms-logo.png">
+<h1>RMS SERVICE</h1>
+</div>
 </header>
 
 <nav>
-  <a href="#services">Services</a>
-  <a href="#contact">Contact</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
 </nav>
 
-<div class="hero">Cleanliness • Shine • Satisfaction</div>
+<div class="hero">
+<h2>Cleanliness • Shine • Satisfaction</h2>
+<button onclick="location.href='#contact'">Get a Quote</button>
+</div>
 
 <section class="section" id="services">
-  <h2>Our Services</h2>
+<h2>Our Services</h2>
 
-  <div class="services">
+<div class="services">
 
-    <!-- HOUSEKEEPING -->
-    <div class="service-box">
-      <h3>🏠 Housekeeping</h3>
-      <p>Professional daily cleaning services</p>
-      <img src="housekeeping1.png">
-      <img src="housekeeping2.png">
-      <img src="housekeeping3.png">
-    </div>
+<div class="service-box">
+<h3>🏠 Housekeeping</h3>
+<img src="housekeeping1.png">
+<img src="housekeeping2.png">
+<img src="housekeeping3.png">
+</div>
 
-    <!-- MARBLE POLISHING -->
-    <div class="service-box">
-      <h3>✨ Marble Polishing</h3>
-      <p>Restore natural shine of marble floors</p>
-      <img src="marble1.png">
-      <img src="marble2.png">
-      <img src="marble3.png">
-    </div>
+<div class="service-box">
+<h3>✨ Marble Polishing</h3>
+<img src="marble1.png">
+<img src="marble2.png">
+<img src="marble3.png">
+</div>
 
-    <!-- PEST CONTROL -->
-    <div class="service-box">
-      <h3>🛡️ Pest Control</h3>
-      <p>Safe & effective pest solutions</p>
-      <img src="pest1.png">
-      <img src="pest2.png">
-      <img src="pest3.png">
-    </div>
+<div class="service-box">
+<h3>🛡️ Pest Control</h3>
+<img src="pest1.png">
+<img src="pest2.png">
+<img src="pest3.png">
+</div>
 
-    <!-- CARPET & SOFA -->
-    <div class="service-box">
-      <h3>🧼 Carpet & Sofa Shampooing</h3>
-      <p>Deep cleaning for carpets & sofas</p>
-      <img src="carpet1.png">
-      <img src="sofa1.png">
-      <img src="sofa2.png">
-    </div>
+<div class="service-box">
+<h3>🧼 Carpet & Sofa Shampooing</h3>
+<img src="carpet1.png">
+<img src="sofa1.png">
+<img src="sofa2.png">
+</div>
 
-    <!-- WINDOW GLASS -->
-    <div class="service-box">
-      <h3>🪟 Window Glass Cleaning</h3>
-      <p>Crystal clear glass cleaning</p>
-      <img src="glass1.png">
-      <img src="glass2.png">
-      <img src="glass3.png">
-    </div>
+<div class="service-box">
+<h3>🪟 Window Glass Cleaning</h3>
+<img src="glass1.png">
+<img src="glass2.png">
+<img src="glass3.png">
+</div>
 
-  </div>
+</div>
 </section>
 
 <section class="section" id="contact">
-  <h2>Contact</h2>
-  <p>📞 +91-8628969218</p>
-  <p>📧 rohitkashyap69218@gmail.com</p>
+<h2>Contact Us</h2>
+<p>📞 +91-8628969218</p>
+<p>📧 rohitkashyap69218@gmail.com</p>
+
+<div class="contact-buttons">
+<a href="https://wa.me/918628969218" class="btn-pro whatsapp" target="_blank">
+<i class="fab fa-whatsapp"></i> WhatsApp
+</a>
+<a href="sms:+918628969218" class="btn-pro sms">
+<i class="fas fa-sms"></i> SMS
+</a>
+<a href="mailto:rohitkashyap69218@gmail.com" class="btn-pro email">
+<i class="fas fa-envelope"></i> Email
+</a>
+</div>
 </section>
 
-<footer>
-  © 2025 RMS Service. All Rights Reserved.
-</footer>
+<footer>© 2025 RMS Service</footer>
 
 </body>
 </html>
