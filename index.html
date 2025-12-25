@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RMS Service - Professional Facility Management</title>
 
-  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
@@ -23,7 +22,6 @@
 
     .logo { display: flex; align-items: center; gap: 15px; }
     .logo img { height: 60px; }
-    .tagline { font-size: 1rem; text-align: right; }
 
     nav {
       background:#003f6b;
@@ -38,72 +36,35 @@
       color:white;
       text-decoration:none;
       font-weight:bold;
-      position: relative;
     }
-
-    nav a::after {
-      content:'';
-      position:absolute;
-      width:0;
-      height:2px;
-      bottom:-3px;
-      left:0;
-      background:#ff9800;
-      transition:0.3s;
-    }
-
-    nav a:hover::after { width:100%; }
 
     .hero {
-      background:url('shiny-marble.png') center/cover no-repeat;
-      height:400px;
+      background:#000;
+      height:300px;
       display:flex;
-      flex-direction:column;
       justify-content:center;
       align-items:center;
       color:white;
-      text-shadow:2px 2px 5px #000;
-    }
-
-    .hero-text {
-      font-size:1.6em;
-      font-weight:600;
-      animation:fadeIn 2s;
-    }
-
-    @keyframes fadeIn {
-      from { opacity:0; transform:scale(0.95); }
-      to { opacity:1; transform:scale(1); }
-    }
-
-    .hero button {
-      margin-top:20px;
-      padding:12px 30px;
-      background:#ff9800;
-      border:none;
-      border-radius:30px;
-      color:white;
-      font-weight:bold;
-      cursor:pointer;
+      font-size:1.8em;
     }
 
     .section {
       padding:40px;
-      max-width:1000px;
+      max-width:1100px;
       margin:auto;
     }
 
     .services {
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
     }
 
     .service-box {
       background:white;
       padding:20px;
-      border-radius:10px;
-      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.15);
       text-align:center;
     }
 
@@ -113,50 +74,12 @@
       margin-top:10px;
     }
 
-    .contact-buttons {
-      display:flex;
-      gap:15px;
-      flex-wrap:wrap;
-      margin-top:25px;
-    }
-
-    .btn-pro {
-      flex:1;
-      min-width:180px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding:14px 20px;
-      font-size:16px;
-      font-weight:600;
-      color:white;
-      text-decoration:none;
-      border-radius:30px;
-      transition:0.3s;
-      box-shadow:0 6px 15px rgba(0,0,0,0.2);
-    }
-
-    .btn-pro:hover {
-      transform:translateY(-3px);
-      box-shadow:0 10px 25px rgba(0,0,0,0.3);
-    }
-
-    .btn-pro.whatsapp { background:linear-gradient(135deg,#25D366,#128C7E); }
-    .btn-pro.sms { background:linear-gradient(135deg,#ff9800,#e65100); }
-    .btn-pro.email { background:linear-gradient(135deg,#005b96,#003f6b); }
-
     footer {
       background:#003f6b;
       color:white;
       text-align:center;
       padding:20px;
       margin-top:40px;
-    }
-
-    @media(max-width:600px){
-      nav { flex-direction:column; gap:10px; }
-      .hero { height:260px; font-size:1.3em; }
     }
   </style>
 </head>
@@ -165,94 +88,79 @@
 
 <header>
   <div class="logo">
-    <img src="rms-logo.png" alt="RMS Logo">
+    <img src="rms-logo.png">
     <h1>RMS SERVICE</h1>
-  </div>
-  <div class="tagline">
-    Professional Facility Management in Himachal Pradesh
   </div>
 </header>
 
 <nav>
-  <a href="#home">Home</a>
   <a href="#services">Services</a>
-  <a href="#contact">Contact Us</a>
+  <a href="#contact">Contact</a>
 </nav>
 
-<div class="hero">
-  <div class="hero-text">Cleanliness • Shine • Satisfaction</div>
-  <button onclick="location.href='#contact'">Get a Quote</button>
-</div>
-
-<section class="section" id="about">
-  <h2>About Us</h2>
-  <p>We provide professional housekeeping, marble polishing, pest control and deep cleaning services with trained staff and modern equipment.</p>
-</section>
+<div class="hero">Cleanliness • Shine • Satisfaction</div>
 
 <section class="section" id="services">
   <h2>Our Services</h2>
+
   <div class="services">
 
+    <!-- HOUSEKEEPING -->
     <div class="service-box">
       <h3>🏠 Housekeeping</h3>
-      <p>Daily cleaning & hygiene maintenance for all spaces.</p>
-      <img src="housekeeping-floor-cleaning.png">
+      <p>Professional daily cleaning services</p>
+      <img src="housekeeping1.png">
+      <img src="housekeeping2.png">
+      <img src="housekeeping3.png">
     </div>
 
+    <!-- MARBLE POLISHING -->
     <div class="service-box">
       <h3>✨ Marble Polishing</h3>
-      <p>Restore natural shine of marble floors.</p>
-      <img src="marble-polishing-before-after.png">
+      <p>Restore natural shine of marble floors</p>
+      <img src="marble1.png">
+      <img src="marble2.png">
+      <img src="marble3.png">
     </div>
 
+    <!-- PEST CONTROL -->
     <div class="service-box">
       <h3>🛡️ Pest Control</h3>
-      <p>Safe and effective pest control solutions.</p>
-      <img src="pest-control-spray.png">
+      <p>Safe & effective pest solutions</p>
+      <img src="pest1.png">
+      <img src="pest2.png">
+      <img src="pest3.png">
     </div>
 
-    <!-- NEW SERVICE -->
+    <!-- CARPET & SOFA -->
     <div class="service-box">
       <h3>🧼 Carpet & Sofa Shampooing</h3>
-      <p>Deep cleaning to remove stains, dust & odor from carpets and sofas.</p>
-      <img src="carpet-cleaning.png">
-      <img src="sofa-cleaning.png">
+      <p>Deep cleaning for carpets & sofas</p>
+      <img src="carpet1.png">
+      <img src="sofa1.png">
+      <img src="sofa2.png">
     </div>
 
-    <!-- NEW SERVICE -->
+    <!-- WINDOW GLASS -->
     <div class="service-box">
       <h3>🪟 Window Glass Cleaning</h3>
-      <p>Crystal clear window & glass cleaning for homes and offices.</p>
-      <img src="window-glass-cleaning.png">
-      <img src="glass-cleaning-highrise.png">
+      <p>Crystal clear glass cleaning</p>
+      <img src="glass1.png">
+      <img src="glass2.png">
+      <img src="glass3.png">
     </div>
 
   </div>
 </section>
 
 <section class="section" id="contact">
-  <h2>Contact Us</h2>
-  <p>Email: rohitkashyap69218@gmail.com</p>
-  <p>Phone: +91-8628969218</p>
-  <p>Location: Chail, Himachal Pradesh</p>
-
-  <div class="contact-buttons">
-    <a href="https://wa.me/918628969218" class="btn-pro whatsapp" target="_blank">
-      <i class="fab fa-whatsapp"></i> WhatsApp
-    </a>
-
-    <a href="sms:+918628969218" class="btn-pro sms">
-      <i class="fas fa-sms"></i> SMS
-    </a>
-
-    <a href="mailto:rohitkashyap69218@gmail.com" class="btn-pro email">
-      <i class="fas fa-envelope"></i> Email
-    </a>
-  </div>
+  <h2>Contact</h2>
+  <p>📞 +91-8628969218</p>
+  <p>📧 rohitkashyap69218@gmail.com</p>
 </section>
 
 <footer>
-  <p>© 2025 RMS Service. All Rights Reserved.</p>
+  © 2025 RMS Service. All Rights Reserved.
 </footer>
 
 </body>
